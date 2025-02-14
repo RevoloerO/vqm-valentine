@@ -13,25 +13,25 @@ const switchColorPalette = (palette) => {
         root.style.setProperty('--color-neon-2', '#ffccff'); /* Neon pink */
         root.style.setProperty('--color-banner-bg', '#ffe0e0'); /* Soft pink background for contrast */
     } else if (palette === 'matcha') {
-        root.style.setProperty('--color-background', '#f0f0d8');
-        root.style.setProperty('--color-primary', '#e4f8ba');
-        root.style.setProperty('--color-secondary', '#c0d860');
-        root.style.setProperty('--color-accent', '#607848');
-        root.style.setProperty('--color-text', '#604848');
-        root.style.setProperty('--color-border', '#789048');
-        root.style.setProperty('--color-neon-1', '#607848'); /* Matcha neon 1 */
-        root.style.setProperty('--color-neon-2', '#789048'); /* Matcha neon 2 */
-        root.style.setProperty('--color-banner-bg', '#f0f0d8'); /* Matcha background for contrast */
+        root.style.setProperty('--color-background', '#f7f7e8'); /* Light cream background */
+        root.style.setProperty('--color-primary', '#d4e157'); /* Light green primary */
+        root.style.setProperty('--color-secondary', '#aed581'); /* Soft green secondary */
+        root.style.setProperty('--color-accent', '#689f38'); /* Dark green accent */
+        root.style.setProperty('--color-text', '#33691e'); /* Dark green text */
+        root.style.setProperty('--color-border', '#8bc34a'); /* Green border */
+        root.style.setProperty('--color-neon-1', '#689f38'); /* Bright green neon */
+        root.style.setProperty('--color-neon-2', '#6a702b'); /* Lime neon */
+        root.style.setProperty('--color-banner-bg', '#f7f7e8'); /* Light cream background for contrast */
     } else if (palette === 'elegant-matcha') {
-        root.style.setProperty('--color-background', '#f1ebe1'); /* Light beige background */
-        root.style.setProperty('--color-primary', '#c0cfb2'); /* Soft green primary */
-        root.style.setProperty('--color-secondary', '#8ba888'); /* Muted green secondary */
-        root.style.setProperty('--color-accent', '#44624a'); /* Dark green accent */
-        root.style.setProperty('--color-text', '#2e2e2e'); /* Dark gray text */
-        root.style.setProperty('--color-border', '#8ba888'); /* Muted green border */
-        root.style.setProperty('--color-neon-1', '#44624a'); /* Dark green neon */
-        root.style.setProperty('--color-neon-2', '#8ba888'); /* Muted green neon */
-        root.style.setProperty('--color-banner-bg', '#ffffff'); /* White background for contrast */
+        root.style.setProperty('--color-background', '#f5f5f5'); /* Light gray background */
+        root.style.setProperty('--color-primary', '#c8e6c9'); /* Soft green primary */
+        root.style.setProperty('--color-secondary', '#a5d6a7'); /* Light green secondary */
+        root.style.setProperty('--color-accent', '#388e3c'); /* Dark green accent */
+        root.style.setProperty('--color-text', '#1b5e20'); /* Dark green text */
+        root.style.setProperty('--color-border', '#81c784'); /* Green border */
+        root.style.setProperty('--color-neon-1', '#388e3c'); /* Dark green neon */
+        root.style.setProperty('--color-neon-2', '#a5d6a7'); /* Light green neon */
+        root.style.setProperty('--color-banner-bg', '#f5f5f5'); /* Light gray background for contrast */
     } else if (palette === 'heart-valentine') {
         root.style.setProperty('--color-background', '#f6dcdc'); /* Light pink background */
         root.style.setProperty('--color-primary', '#eea9a9'); /* Soft pink primary */
@@ -40,7 +40,7 @@ const switchColorPalette = (palette) => {
         root.style.setProperty('--color-text', '#9c1212'); /* Dark red text */
         root.style.setProperty('--color-border', '#bf3129'); /* Dark red border */
         root.style.setProperty('--color-neon-1', '#c31c1c'); /* Heart red neon */
-        root.style.setProperty('--color-neon-2', '#eea9a9'); /* Soft pink neon */
+        root.style.setProperty('--color-neon-2', '#f6dcdc'); /* Soft pink neon */
         root.style.setProperty('--color-banner-bg', '#f6dcdc'); /* Light pink background for contrast */
     } else if (palette === 'tiramisu') {
         root.style.setProperty('--color-background', '#fff7e7'); /* Light cream background */
@@ -50,7 +50,7 @@ const switchColorPalette = (palette) => {
         root.style.setProperty('--color-text', '#5c3d2e'); /* Dark brown text */
         root.style.setProperty('--color-border', '#a3794e'); /* Brown border */
         root.style.setProperty('--color-neon-1', '#a3794e'); /* Brown neon */
-        root.style.setProperty('--color-neon-2', '#ecdba6'); /* Soft beige neon */
+        root.style.setProperty('--color-neon-2', '#fff7e7'); /* Soft beige neon */
         root.style.setProperty('--color-banner-bg', '#fff8ea'); /* Light cream background for contrast */
     } else if (palette === 'dark-chocolate') {
         root.style.setProperty('--color-background', '#141514'); /* Dark background */
@@ -60,7 +60,7 @@ const switchColorPalette = (palette) => {
         root.style.setProperty('--color-text', '#766257'); /* Light brown text */
         root.style.setProperty('--color-border', '#3e3c32'); /* Dark brown border */
         root.style.setProperty('--color-neon-1', '#584b3e'); /* Brown neon */
-        root.style.setProperty('--color-neon-2', '#766257'); /* Light brown neon */
+        root.style.setProperty('--color-neon-2', '#141514'); /* Light brown neon */
         root.style.setProperty('--color-banner-bg', '#23241f'); /* Dark green background for contrast */
     } else if (palette === 'creamy-chocolate') {
         root.style.setProperty('--color-background', '#EEE1B4'); /* Light cream background */
@@ -70,7 +70,7 @@ const switchColorPalette = (palette) => {
         root.style.setProperty('--color-text', '#301301'); /* Dark brown text */
         root.style.setProperty('--color-border', '#472723'); /* Dark brown border */
         root.style.setProperty('--color-neon-1', '#3C1321'); /* Dark red neon */
-        root.style.setProperty('--color-neon-2', '#766257'); /* Light brown neon */
+        root.style.setProperty('--color-neon-2', '#EEE1B4'); /* Light brown neon */
         root.style.setProperty('--color-banner-bg', '#FFFED0'); /* Soft cream background for contrast */
     }
 };

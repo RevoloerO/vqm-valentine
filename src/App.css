@@ -118,7 +118,7 @@ body {
   margin: 0 10%;
   width: fit-content;
   height: fit-content;
-  background-color: var(--color-banner-bg);
+  background-color: inherit;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -158,9 +158,9 @@ body {
 }
 #logo-text-3 {
   background-image: linear-gradient(-225deg,
-      var(--color-neon-2) 25%,
-      var(--color-neon-1) 50%,
-      var(--color-neon-2) 75%);
+      var(--color-neon-1) 30%,
+      var(--color-neon-2) 50%,
+      var(--color-neon-1) 70%);
   font-size:8vw;
   margin: 0;
   padding-top: 0;
