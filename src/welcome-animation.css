@@ -1,0 +1,70 @@
+@import url('App.css');
+@import url('https://use.typekit.net/ist3wra.css');
+.message-wrap {
+  background-color: transparent;
+  color: var(--color-text);
+  font-family: tahoma;
+  font-size: 3rem;
+  font-weight: 100;
+  line-height: 1.5;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  font-family: "megrim", sans-serif;
+  margin: auto;
+  width: fit-content;
+}
+.message-wrap span::before {
+  content: "♥ Anh Yêu Em ♥";
+  animation: openclose infinite 20s ease-in-out;
+  margin: auto  ;
+  padding: auto;
+}
+
+@keyframes openclose {
+  5%, 15%,25%,35%,45%,55%,65%,75%,85%,95%{
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+    content: "♥ Anh Yêu Em ♥";
+  }
+  20% {
+    opacity: 1;
+    content: "♥ I love you ♥";
+  }
+  30% {
+    opacity: 1;
+    content: "♥ 愛してます ♥";
+  }
+  40% {
+    opacity: 1;
+    content: "♥ Te amo ♥";
+  }
+  50% {
+    opacity: 1;
+    content: "♥ 사랑해 ♥";
+  }
+  60% {
+    opacity: 1;
+    content: "♥ 我愛你 ♥";
+  }
+  70% {
+    opacity: 1;
+    content: "♥ Je t'aime ♥";
+  }
+  80% {
+    opacity: 1;
+    content: "♥ Aloha wau ia 'oe ♥";
+  }
+  90% {
+    opacity: 1;
+    content: "♥ ฉันรักคุณ ♥";
+  }
+}
+@media (max-width: 1200px){
+  .message-wrap {
+    margin: auto;
+    text-align: center;
+  }
+}
