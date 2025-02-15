@@ -1,5 +1,6 @@
 import './App.css';
 import ColorSwitcher from './ColorSwitcher'; // Import the new component
+import Answer from './Answer'; // Import the new Answer component
 
 const HQLogo = () => {
   return (
@@ -10,7 +11,6 @@ const HQLogo = () => {
       </div>
       <div className="logo-text" id='logo-text-3'>VALENTINE?</div>
     </div>
-
   );
 };
 
@@ -37,6 +37,7 @@ const Banner = () => {
       <div className="banner-welcome">
         <HQLogo />
         <WelcomeMessage />
+        <Answer /> {/* Add the Answer component here */}
       </div>
       <div className="footer">
         
