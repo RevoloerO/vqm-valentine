@@ -1,4 +1,14 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
+const themes = [
+    { value: 'default', label: 'Valentine' },
+    { value: 'matcha', label: 'Matcha' },
+    { value: 'elegant-matcha', label: 'Elegant Matcha' },
+    { value: 'heart-valentine', label: 'Heart Valentine' },
+    { value: 'tiramisu', label: 'Tiramisu' },
+    { value: 'dark-chocolate', label: 'Dark Chocolate' },
+    { value: 'creamy-chocolate', label: 'Creamy Chocolate' }
+];
 
 const switchColorPalette = (palette) => {
     const root = document.documentElement;
@@ -76,18 +86,40 @@ const switchColorPalette = (palette) => {
 };
 
 const ColorSwitcher = () => {
+    const [autoSwitch, setAutoSwitch] = useState(true); // Set to true by default
+    const [currentTheme, setCurrentTheme] = useState('default');
+
+    useEffect(() => {
+        let interval;
+        if (autoSwitch) {
+            interval = setInterval(() => {
+                const randomTheme = themes[Math.floor(Math.random() * themes.length)].value;
+                setCurrentTheme(randomTheme);
+                switchColorPalette(randomTheme);
+            }, 5000); // Switch theme every 5 seconds
+        }
+        return () => clearInterval(interval);
+    }, [autoSwitch]);
+
+    const handleThemeChange = (e) => {
+        const selectedTheme = e.target.value;
+        setCurrentTheme(selectedTheme);
+        switchColorPalette(selectedTheme);
+    };
+
     return (
         <div className="color-switcher">
+            Auto:
+            <label className="switch">
+                <input type="checkbox" checked={autoSwitch} onChange={() => setAutoSwitch(!autoSwitch)} />
+                <span className="slider round"></span>
+            </label>
             <label htmlFor="color-palette">Theme: </label>
-            <select onChange={(e) => switchColorPalette(e.target.value)}>
-                <option value="default">Valentine</option> {/* Valentine as default */}
-                <option value="matcha">Matcha</option>
-                <option value="elegant-matcha">Elegant Matcha</option> {/* New Elegant Matcha palette */}
-                <option value="heart-valentine">Heart Valentine</option> {/* New Heart Valentine palette */}
-                <option value="tiramisu">Tiramisu</option> {/* New Tiramisu palette */}
-                <option value="dark-chocolate">Dark Chocolate</option> {/* New Dark Chocolate palette */}
-                <option value="creamy-chocolate">Creamy Chocolate</option> {/* New Creamy Chocolate palette */}
-            </select>
+            <select value={currentTheme} onChange={handleThemeChange}>
+                {themes.map((theme) => (
+                    <option key={theme.value} value={theme.value}>{theme.label}</option>
+                ))}
+            </select> 
         </div>
     );
 };

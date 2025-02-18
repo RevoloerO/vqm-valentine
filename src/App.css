@@ -61,7 +61,7 @@ body {
   grid-column-start: 1;
   grid-column-end: end;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   position: absolute;
   top: 10px;
@@ -85,6 +85,9 @@ body {
 .banner-welcome {
   grid-column-start: 1;
   grid-column-end: 6;
+  grid-row-start: 2;
+  grid-row-end: end;
+  padding-top: 5vw;
 }
 
 .color-switcher {
@@ -329,6 +332,51 @@ a {
   }
 }
 
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin: 0 10px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-background);
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--color-accent);
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background: linear-gradient(90deg, var(--color-accent) 0%, var(--color-background) 100%);
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
 
 @keyframes textclip {
   to {
@@ -391,7 +439,7 @@ a {
   }
 
   .contact-bar {
-    font-size: 30px;
+    
     text-align: center;
     margin-top: 1vh;
     grid-row-start: 1;
@@ -417,6 +465,7 @@ a {
     grid-column-end: end;
     grid-row-start: 2;
     grid-row-end: end;
+    padding-top: 12vw;
   }
   .logo-text {
     font-size: 9vw;
@@ -447,6 +496,7 @@ a {
   }
 
   .contact-bar {
+    font-size: 15px; /* Further scale down for smaller screens */
     width: auto;
   }
 }
@@ -484,7 +534,7 @@ a {
     grid-column-end: end;
     grid-row-start: 3;
     grid-row-end: end;
-  
+    
   }
   .title h1 {
     font-size: 7vw;
